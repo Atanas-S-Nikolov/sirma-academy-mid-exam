@@ -14,9 +14,16 @@ body {
     font-family: 'Open Sans';
 }
 
-header, .section-content-wrapper {
+header, .section-flex-content-wrapper {
     padding: 0 150px;
     display: flex;
+}
+
+.section-grid-content-wrapper {
+    display: grid;
+    place-items: center;
+    gap: 30px;
+    padding-top: 109px;
 }
 
 header {
@@ -53,6 +60,7 @@ input {
     color: var(--title-color);
     font-family: "Raleway";
     text-align: center;
+    text-transform: uppercase;
 }
 
 .primary-heading, .secondary-heading {
@@ -79,8 +87,8 @@ input {
 }
 
 .divider {
-    background-color: white;
-    width: 100%;
+    background-color: var(--primary-color);
+    width: 64px;
     height: 2px;
     margin: 0;
     border: none
@@ -116,7 +124,7 @@ input {
     padding-bottom: 140px;
 }
 
-.hero > .section-content-wrapper {
+.hero > .section-flex-content-wrapper {
     gap: 222px
 }
 
@@ -146,6 +154,7 @@ input {
 
 .hero-text .divider {
     width: 74px;
+    background-color: white;
 }
 
 .hero-text .outlined-btn {
@@ -186,7 +195,7 @@ input {
     border-bottom-right-radius: inherit;
 }
 
-.social-media > .section-content-wrapper {
+.social-media > .section-flex-content-wrapper {
     gap: 87px;
     align-items: center;
     padding-top: 22px;
@@ -257,11 +266,6 @@ input {
     background-color: var(--bg-color-gray);
 }
 
-#features .divider {
-    width: 64px;
-    background-color: var(--primary-color);
-}
-
 .sub-list-section,
 .sub-list-section ul,
 .standard-picture-section {
@@ -293,4 +297,102 @@ input {
 
 .sub-list-section ul li:nth-of-type(even)::before {
     content: url(/assets/icons/download-icon-overlay.png);
+}
+
+.card {
+    display: grid;
+    place-items: center;
+    text-align: center;
+}
+
+#about  {
+    padding: 0 143px;
+    padding-bottom: 105px;
+}
+
+#about .section-flex-content-wrapper {
+    margin-top: 80px;
+    gap: 32px;
+    padding: 0;
+    justify-content: center;
+}
+
+#about .section-flex-content-wrapper .card {
+    gap: 25px;
+}
+
+#pricing {
+    padding: 0 145px;
+    padding-bottom: 95px;
+    background-color: var(--bg-color-gray);
+}
+
+#pricing .section-flex-content-wrapper {
+    margin-top: 80px;
+    gap: 40px;
+    padding: 0;
+    justify-content: center;
+}
+
+#pricing .section-flex-content-wrapper .card {
+    width: 343px;
+    justify-items: stretch;
+    align-content: end;
+}
+
+#pricing .card > .card-header > .secondary-heading {
+    color: white;
+}
+
+.card-header, .card-content {
+    background-color: var(--secondary-color);
+    color: white;
+}
+
+.card-header {
+    padding: 21px 0;
+    margin-bottom: 1px;
+}
+
+.card-content .plan-price {
+    font-size: 94px;
+    font-family: "Raleway";
+    font-weight: 700;
+}
+
+.card-content {
+    height: fit-content;
+}
+
+.card-content .text {
+    font-style: italic;
+    margin-bottom: 18px;
+}
+
+.card-content .most-popular {
+    background-color: var(--primary-color);
+    padding: 14px 0;
+}
+
+.card-content .plan-price::before {
+    content: "$";
+    font-size: 35px;
+    line-height: 24px;
+    color: #ffffff;
+}
+
+.card-content .divider {
+    width: 100%;
+    height: 5px;
+}
+
+.card-details {
+    display: inherit;
+    gap: 1px;
+}
+
+.card-details li {
+    padding: 14px 0;
+    background-color: white;
+    text-transform: uppercase;
 }
