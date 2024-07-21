@@ -217,6 +217,16 @@ textarea {
     margin-bottom: 12px;
 }
 
+.social-media-logos {
+    display: flex;
+    color: #cccccc;
+}
+
+.social-media .social-media-logos {
+    font-size: 46px;
+    gap: 52px;
+}
+
 #features .section-one {
     display: flex;
     gap: 100px;
@@ -499,9 +509,16 @@ textarea {
     margin-bottom: 80px;
 }
 
+footer .social-media-logos {
+    font-size: 23px;
+    gap: 26px;
+}
+
 footer {
-    background-color: black;
+    display: grid;
+    place-content: center;
     text-align: center;
+    background-color: black;
     padding-top: 21px;
     padding-bottom: 15px;
 }
