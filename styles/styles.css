@@ -8,6 +8,12 @@
     --title-color: #212121;
     --text-color: #86878b;
     --default-border-radius: 4px;
+    --review-image-size: 70px;
+    --review-arrow-border-lr: 10px;
+    --review-arrow-border-t: 17px;
+    --review-arrow-margin-l: calc(
+        var(--review-image-size) / 2 - var(--review-arrow-border-lr)
+    );
 }
 
 body {
@@ -400,6 +406,42 @@ textarea {
     padding: 14px 0;
     background-color: white;
     text-transform: uppercase;
+}
+
+#rewievs .section-flex-content-wrapper {
+    margin-top: 55px;
+    margin-bottom: 101px;
+    gap: 119px;
+    padding: 0 171px;
+}
+
+.review-text {
+    font-size: 14px;
+    color: #86878b;
+    font-style: italic;
+    background-color: var(--bg-color-gray);
+    padding: 24px 12px;
+}
+
+.review .arrow {
+    height: 0;
+    width: 0;
+    border-left: var(--review-arrow-border-lr) solid transparent;
+    border-right: var(--review-arrow-border-lr) solid transparent;
+    border-top: var(--review-arrow-border-t) solid var(--bg-color-gray);
+    margin-left: var(--review-arrow-margin-l);
+    margin-bottom: 8px;
+}
+
+.reviewer-info {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.reviewer-info img {
+    width: var(--review-image-size);
+    aspect-ratio: 1 / 1;
 }
 
 .stylish-axure-design {
