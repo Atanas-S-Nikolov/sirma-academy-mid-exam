@@ -33,3 +33,12 @@ button {
 input, textarea {
     outline-width: 0px;
 }
+
+::placeholder {
+    color: var(--text-color);
+    opacity: 1;
+  }
+  
+::-ms-input-placeholder {
+color: var(--text-color);
+}

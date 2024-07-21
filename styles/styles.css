@@ -57,7 +57,6 @@ button {
 
 input, textarea {
     filter: drop-shadow(0px 1px 0px rgba(0,0,1,0.16));
-    color: var(--text-color);
 }
 
 textarea {
@@ -220,6 +219,7 @@ textarea {
 .social-media-logos {
     display: flex;
     color: #cccccc;
+    flex-wrap: wrap;
 }
 
 .social-media .social-media-logos {
@@ -327,14 +327,13 @@ textarea {
 }
 
 #about  {
-    padding: 0 143px;
     padding-bottom: 105px;
 }
 
 #about .section-flex-content-wrapper {
     margin-top: 80px;
     gap: 32px;
-    padding: 0;
+    padding: 0 143px;
     justify-content: center;
 }
 
@@ -343,7 +342,6 @@ textarea {
 }
 
 #pricing {
-    padding: 0 145px;
     padding-bottom: 95px;
     background-color: var(--bg-color-gray);
 }
@@ -351,7 +349,7 @@ textarea {
 #pricing .section-flex-content-wrapper {
     margin-top: 80px;
     gap: 40px;
-    padding: 0;
+    padding: 0 145px;
     justify-content: center;
 }
 
@@ -418,7 +416,7 @@ textarea {
     text-transform: uppercase;
 }
 
-#rewievs .section-flex-content-wrapper {
+#reviews .section-flex-content-wrapper {
     margin-top: 55px;
     margin-bottom: 101px;
     gap: 119px;
@@ -468,6 +466,7 @@ textarea {
 .stylish-axure-design .section-title,
 .stylish-axure-design_text {
     color: white;
+    text-align: center;
 }
 
 .stylish-axure-design .section-title {
@@ -529,4 +528,185 @@ footer .text {
     color: white;
     line-height: 1;
     margin-top: 15px;
+}
+
+@media (max-width: 1200px) {
+    header, .section-flex-content-wrapper {
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+
+    .section-flex-content-wrapper {
+        gap: 50px;
+    }
+
+    .hero > .section-flex-content-wrapper {
+        gap: 100px;
+    }
+
+    .social-media > .section-flex-content-wrapper {
+        gap: 50px;
+    }
+
+    #features .section-two,
+    #features .section-three {
+        gap: 30px;
+    }
+
+    #about .section-flex-content-wrapper {
+        gap: 16px;
+        padding: 0 50px;
+    }
+
+    #pricing .section-flex-content-wrapper {
+        gap: 30px;
+        padding: 0 50px;
+    }
+
+    #reviews .section-flex-content-wrapper {
+        gap: 40px;
+        padding: 0 50px;
+    }
+
+    #contact .section-flex-content-wrapper {
+        gap: 30px;
+        padding: 0 50px;
+    }
+}
+
+@media (max-width: 900px) {
+    .section-flex-content-wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .social-media .social-media-logos {
+        font-size: 32px;
+        gap: 40px;
+    }
+
+    #features .section-one,
+    #features .section-two,
+    #features .section-three {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+
+    #features .section-one {
+        gap: 30px;
+    }
+
+    .standard-picture-section {
+        margin-top: 0px;
+    }
+
+    .section-grid-content-wrapper {
+        gap: 30px;
+        padding-top: 60px;
+    }
+
+    .tabs {
+        display: flex;
+    }
+}
+
+@media (max-width: 767px) {
+    header, nav {
+        flex-direction: column;
+    }
+
+    nav {
+        margin-top: 35px;
+        gap: 35px;
+    }
+
+    img {
+        max-width: 100%;
+    }
+
+    .section-title {
+        font-size: 26px;
+        line-height: 33px;
+    }
+
+    .hero-paragraph {
+        font-size: 14px;
+        line-height: 20px;
+    }
+    
+    .primary-heading, .secondary-heading {
+        font-size: 18px;
+        font-weight: 700;
+    }
+
+    .text {
+        font-size: 12px;
+        line-height: 16px;
+    }
+
+    button {
+        font-size: 12px;
+    }
+    
+    .primary-btn {
+        height: 36px;
+        padding: 12px 20px;
+    }
+    
+    .outlined-btn {
+        padding: 8px 20px;
+        height: 32px;
+    }
+
+    .hero-form-wrapper {
+        text-align: center;
+        min-width: auto;
+        background-color: white;
+        grid-template-rows: 54px auto 54px;
+        border-radius: var(--default-border-radius);
+        margin-top: 30px;
+    }
+
+    .tab {
+        width: 60px;
+        aspect-ratio: 1 / 1;
+        font-size: 12px;
+        font-weight: 700;
+    }
+    
+    #pricing .section-flex-content-wrapper .card {
+        width: 200px;
+    }
+
+    .card-header {
+        padding: 21px 0;
+        margin-bottom: 1px;
+    }
+    
+    .card-content .plan-price {
+        font-size: 64px;
+        font-family: "Raleway";
+        font-weight: 700;
+    }
+    
+    .card-content .text {
+        font-style: italic;
+        margin-bottom: 18px;
+    }
+    
+    .card-content .most-popular {
+        background-color: var(--primary-color);
+        padding: 14px 0;
+    }
+    
+    .card-content .plan-price::before {
+        content: "$";
+        font-size: 25px;
+    }
+
+    .hero-logo {
+        width: auto;
+        width: 145px;
+        height: 50px;
+    }
 }
